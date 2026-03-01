@@ -1,0 +1,6 @@
+node_moudles
+.vscode
+dist
+dev.db
+*.db
+*.env
