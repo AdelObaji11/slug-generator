@@ -4,14 +4,10 @@ export const slug = (url: string): string => {
     .trim()
     .replace(/[" "_-]+/g, "-")
     .replace(/[!@#$%^&/.*+]+/g, "");
-  return cleanSlug(newurl);
+  return checkStartAndEnd(newurl);
 };
-const cleanSlug = (helpUrl: string): string => {
-  helpUrl =
-    helpUrl.charAt(0) === "-" ? (helpUrl = helpUrl.substring(1)) : helpUrl;
-  helpUrl =
-    helpUrl.charAt(helpUrl.length - 1) === "-"
-      ? (helpUrl = helpUrl.substring(0, helpUrl.length - 1))
-      : helpUrl;
-  return helpUrl;
+const checkStartAndEnd = (url: string): string => {
+  url = url.startsWith("-") ? (url = url.substring(1)) : url;
+  url = url.endsWith("-") ? (url = url.substring(0, url.length - 1)) : url;
+  return url;
 };
