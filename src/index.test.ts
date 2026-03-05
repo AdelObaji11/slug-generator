@@ -1,5 +1,4 @@
 import { slug } from "./index";
-
 describe("slug url", () => {
   it("replace to lowercase", () => {
     expect(slug("HelloWorlD")).toBe("helloworld");
@@ -25,3 +24,4 @@ describe("slug url", () => {
     expect(slug("Hello- -World")).toBe("hello-world");
   });
 });
+
