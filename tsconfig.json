@@ -4,8 +4,9 @@
     "outDir": "./dist",
 
     "module": "esnext",
+    "moduleResolution": "node",
     "target": "es2020",
-    "types": [],
+    "types": ["vitest/globals"],
 
     "sourceMap": true,
     "declaration": true,
