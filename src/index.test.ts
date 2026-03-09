@@ -1,4 +1,5 @@
 import { slug } from "./index";
+import { describe, it, expect } from "vitest";
 describe("slug url", () => {
   it("replace to lowercase", () => {
     expect(slug("HelloWorlD")).toBe("helloworld");
@@ -10,7 +11,7 @@ describe("slug url", () => {
   });
   it("remove leading/trailing hyphens", () => {
     expect(slug("-Hello-")).toBe("hello");
-    expect(slug("---Hello---")).tobe("hello");
+    expect(slug("---Hello---")).toBe("hello");
   });
   it("replace spaces and underscores with hyphens", () => {
     expect(slug("Hello_  _World")).toBe("hello-world");
@@ -24,4 +25,3 @@ describe("slug url", () => {
     expect(slug("Hello- -World")).toBe("hello-world");
   });
 });
-
