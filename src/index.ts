@@ -1,5 +1,5 @@
 export const slug = (url: string): string => {
-  let newurl = url
+  const newurl = url
     .toLowerCase()
     .trim()
     .replace(/[" "_-]+/g, "-")
