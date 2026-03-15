@@ -5,7 +5,8 @@
 
     "module": "esnext",
     "target": "es2020",
-    "types": [],
+    "types": ["vitest/globals"],
+    "moduleResolution": "bundler",
 
     "sourceMap": true,
     "declaration": true,
@@ -20,6 +21,8 @@
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
-    "skipLibCheck": true
-  }
+    "skipLibCheck": true,
+    "esModuleInterop": true
+  },
+  "include": ["src"]
 }
