@@ -1,13 +1,13 @@
 export const slug = (url: string): string => {
-  const newurl = url
+  const newUrl = url
     .toLowerCase()
     .trim()
     .replace(/[" "_-]+/g, "-")
     .replace(/[!@#$%^&/.*+]+/g, "");
-  return trimLeadingAndTrillingDashes(newurl);
+  return trimLeadingAndTrillingDashes(newUrl);
 };
 const trimLeadingAndTrillingDashes = (url: string): string => {
-  url = url.startsWith("-") ? url.substring(1) : url;
-  url = url.endsWith("-") ? url.substring(0, url.length - 1) : url;
-  return url;
+const startUrl = url.startsWith("-") ? url.substring(1) : url;
+const endUrl = startUrl.endsWith("-") ? startUrl.substring(0, startUrl.length - 1) : startUrl;
+  return endUrl;
 };
